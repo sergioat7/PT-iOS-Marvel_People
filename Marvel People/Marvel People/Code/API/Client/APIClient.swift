@@ -18,9 +18,12 @@ public class APIClient {
     
     // MARK: - Private properties
     
-    private let session = Session(configuration: URLSessionConfiguration.default)
+    private let session = Session(configuration: URLSessionConfiguration.default,
+                                  serverTrustManager: CustomServerTrustManager(evaluators: [
+                                    Constants.host: PinnedCertificatesTrustEvaluator(certificates: ParseDERCertificate().getCertificates())
+                                  ]))
     private var baseEndpoint: String {
-        return "https://gateway.marvel.com/v1/public"
+        return "https://\(Constants.host)/v1/public"
     }
     private var defaultQueryParams: Parameters {
         return [
