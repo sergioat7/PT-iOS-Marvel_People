@@ -35,6 +35,7 @@
 		FB55D5D1254C3FFC00B8DF3D /* UrlResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D5D0254C3FFC00B8DF3D /* UrlResponse.swift */; };
 		FB55D5EC254C471100B8DF3D /* ItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D5EB254C471100B8DF3D /* ItemResponse.swift */; };
 		FB55D5FD254C476E00B8DF3D /* ExtraDataListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D5FC254C476E00B8DF3D /* ExtraDataListResponse.swift */; };
+		FB55D61C254C4D1700B8DF3D /* GetCharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D61B254C4D1700B8DF3D /* GetCharacterRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FB55D5D0254C3FFC00B8DF3D /* UrlResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlResponse.swift; sourceTree = "<group>"; };
 		FB55D5EB254C471100B8DF3D /* ItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemResponse.swift; sourceTree = "<group>"; };
 		FB55D5FC254C476E00B8DF3D /* ExtraDataListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraDataListResponse.swift; sourceTree = "<group>"; };
+		FB55D61B254C4D1700B8DF3D /* GetCharacterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				FB55D56C254C305800B8DF3D /* APIRequest.swift */,
+				FB55D61A254C4D0A00B8DF3D /* Character */,
 				FB55D58A254C34D500B8DF3D /* Characters */,
 				FB55D571254C305D00B8DF3D /* Error */,
 			);
@@ -294,6 +297,14 @@
 				FB55D5D0254C3FFC00B8DF3D /* UrlResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FB55D61A254C4D0A00B8DF3D /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D61B254C4D1700B8DF3D /* GetCharacterRequest.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +456,7 @@
 				FB55D57B254C323A00B8DF3D /* CustomServerTrustManager.swift in Sources */,
 				FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */,
 				FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */,
+				FB55D61C254C4D1700B8DF3D /* GetCharacterRequest.swift in Sources */,
 				FB55D541254C1F9200B8DF3D /* UIViewController+Extensions.swift in Sources */,
 				FB55D4E3254C1BBC00B8DF3D /* AppDelegate.swift in Sources */,
 				FB55D573254C306900B8DF3D /* ErrorResponse.swift in Sources */,
