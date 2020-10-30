@@ -19,6 +19,7 @@
 		FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D52C254C1D7500B8DF3D /* BaseRouter.swift */; };
 		FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D531254C1E1900B8DF3D /* BaseViewController.swift */; };
 		FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D536254C1E2500B8DF3D /* BaseViewModel.swift */; };
+		FB55D541254C1F9200B8DF3D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D540254C1F9200B8DF3D /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FB55D52C254C1D7500B8DF3D /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		FB55D531254C1E1900B8DF3D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FB55D536254C1E2500B8DF3D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		FB55D540254C1F9200B8DF3D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				FB55D523254C1D5300B8DF3D /* Base */,
+				FB55D53E254C1F7C00B8DF3D /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -186,6 +189,22 @@
 				FB55D536254C1E2500B8DF3D /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		FB55D53E254C1F7C00B8DF3D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D53F254C1F8700B8DF3D /* UIViewController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FB55D53F254C1F8700B8DF3D /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D540254C1F9200B8DF3D /* UIViewController+Extensions.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +341,7 @@
 				FB55D4E7254C1BBC00B8DF3D /* ViewController.swift in Sources */,
 				FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */,
 				FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */,
+				FB55D541254C1F9200B8DF3D /* UIViewController+Extensions.swift in Sources */,
 				FB55D4E3254C1BBC00B8DF3D /* AppDelegate.swift in Sources */,
 				FB55D4E5254C1BBC00B8DF3D /* SceneDelegate.swift in Sources */,
 				FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */,
