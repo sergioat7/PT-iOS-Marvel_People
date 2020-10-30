@@ -99,13 +99,10 @@
 		FB55D4E1254C1BBC00B8DF3D /* Marvel People */ = {
 			isa = PBXGroup;
 			children = (
-				FB55D4E2254C1BBC00B8DF3D /* AppDelegate.swift */,
-				FB55D4E4254C1BBC00B8DF3D /* SceneDelegate.swift */,
-				FB55D4E6254C1BBC00B8DF3D /* ViewController.swift */,
-				FB55D4E8254C1BBC00B8DF3D /* Main.storyboard */,
 				FB55D4EB254C1BBC00B8DF3D /* Assets.xcassets */,
+				FB55D515254C1C1300B8DF3D /* Code */,
 				FB55D4ED254C1BBC00B8DF3D /* LaunchScreen.storyboard */,
-				FB55D4F0254C1BBC00B8DF3D /* Info.plist */,
+				FB55D516254C1C1900B8DF3D /* Resources */,
 			);
 			path = "Marvel People";
 			sourceTree = "<group>";
@@ -126,6 +123,49 @@
 				FB55D506254C1BBD00B8DF3D /* Info.plist */,
 			);
 			path = "Marvel PeopleUITests";
+			sourceTree = "<group>";
+		};
+		FB55D515254C1C1300B8DF3D /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D51D254C1C5000B8DF3D /* API */,
+				FB55D4E2254C1BBC00B8DF3D /* AppDelegate.swift */,
+				FB55D51E254C1C5500B8DF3D /* Common */,
+				FB55D51F254C1C5A00B8DF3D /* Controllers */,
+				FB55D4E4254C1BBC00B8DF3D /* SceneDelegate.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		FB55D516254C1C1900B8DF3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D4F0254C1BBC00B8DF3D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FB55D51D254C1C5000B8DF3D /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FB55D51E254C1C5500B8DF3D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FB55D51F254C1C5A00B8DF3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D4E8254C1BBC00B8DF3D /* Main.storyboard */,
+				FB55D4E6254C1BBC00B8DF3D /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
