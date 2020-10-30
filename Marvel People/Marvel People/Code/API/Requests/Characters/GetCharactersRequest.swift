@@ -29,11 +29,14 @@ class GetCharactersRequest: APIRequest {
     
     public var queryParams: Parameters
     
-    public init(search: String?) {
+    public init(page: Int, search: String?) {
         
-        queryParams = [:]
+        let offset = (page - 1) * Constants.limit
+        queryParams = [Constants.limitQueryParam : "\(Constants.limit)"]
+        queryParams = [Constants.offsetQueryParam : "\(offset)"]
         if let search = search {
             queryParams[Constants.nameStartsWithQueryParam] = search
         }
+        
     }
 }

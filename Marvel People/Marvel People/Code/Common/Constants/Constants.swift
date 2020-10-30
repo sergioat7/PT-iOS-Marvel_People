@@ -13,5 +13,8 @@ struct Constants {
     // MARK: - Network constants
     
     static let host = "gateway.marvel.com"
+    static let limitQueryParam = "limit"
+    static let offsetQueryParam = "offset"
     static let nameStartsWithQueryParam = "nameStartsWith"
+    static let limit = 20
 }
