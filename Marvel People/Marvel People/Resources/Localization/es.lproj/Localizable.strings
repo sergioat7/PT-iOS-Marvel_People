@@ -9,3 +9,7 @@
 // General
 
 "APP_NAME" = "Marvel People";
+
+// Character list
+
+"MARVEL_CHARACTERS" = "Personajes Marvel";

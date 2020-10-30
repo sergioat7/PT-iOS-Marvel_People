@@ -38,6 +38,12 @@
 		FB55D61C254C4D1700B8DF3D /* GetCharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D61B254C4D1700B8DF3D /* GetCharacterRequest.swift */; };
 		FB55D66B254CC8DA00B8DF3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB55D66D254CC8DA00B8DF3D /* Localizable.strings */; };
 		FB55D67A254CC94500B8DF3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB55D67C254CC94500B8DF3D /* Localizable.strings */; };
+		FB55D690254CCB0400B8DF3D /* CharacterListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB55D68A254CCB0400B8DF3D /* CharacterListView.storyboard */; };
+		FB55D691254CCB0400B8DF3D /* CharacterListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68B254CCB0400B8DF3D /* CharacterListRouter.swift */; };
+		FB55D692254CCB0400B8DF3D /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68C254CCB0400B8DF3D /* CharacterListViewController.swift */; };
+		FB55D693254CCB0400B8DF3D /* CharacterListApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68D254CCB0400B8DF3D /* CharacterListApiClient.swift */; };
+		FB55D694254CCB0400B8DF3D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68E254CCB0400B8DF3D /* CharacterListViewModel.swift */; };
+		FB55D695254CCB0400B8DF3D /* CharacterListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68F254CCB0400B8DF3D /* CharacterListDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,12 @@
 		FB55D61B254C4D1700B8DF3D /* GetCharacterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterRequest.swift; sourceTree = "<group>"; };
 		FB55D66C254CC8DA00B8DF3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FB55D67B254CC94500B8DF3D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB55D68A254CCB0400B8DF3D /* CharacterListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CharacterListView.storyboard; sourceTree = "<group>"; };
+		FB55D68B254CCB0400B8DF3D /* CharacterListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRouter.swift; sourceTree = "<group>"; };
+		FB55D68C254CCB0400B8DF3D /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		FB55D68D254CCB0400B8DF3D /* CharacterListApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListApiClient.swift; sourceTree = "<group>"; };
+		FB55D68E254CCB0400B8DF3D /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		FB55D68F254CCB0400B8DF3D /* CharacterListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +227,7 @@
 		FB55D51F254C1C5A00B8DF3D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB55D687254CCAE400B8DF3D /* CharacterList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +332,35 @@
 				FB55D67C254CC94500B8DF3D /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		FB55D687254CCAE400B8DF3D /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D688254CCAF200B8DF3D /* APIClient */,
+				FB55D68F254CCB0400B8DF3D /* CharacterListDataManager.swift */,
+				FB55D68B254CCB0400B8DF3D /* CharacterListRouter.swift */,
+				FB55D68C254CCB0400B8DF3D /* CharacterListViewController.swift */,
+				FB55D68E254CCB0400B8DF3D /* CharacterListViewModel.swift */,
+				FB55D689254CCAF700B8DF3D /* View */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		FB55D688254CCAF200B8DF3D /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D68D254CCB0400B8DF3D /* CharacterListApiClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		FB55D689254CCAF700B8DF3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D68A254CCB0400B8DF3D /* CharacterListView.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */,
+				FB55D690254CCB0400B8DF3D /* CharacterListView.storyboard in Resources */,
 				FB55D67A254CC94500B8DF3D /* Localizable.strings in Resources */,
 				FB55D66B254CC8DA00B8DF3D /* Localizable.strings in Resources */,
 				FB55D4EC254C1BBC00B8DF3D /* Assets.xcassets in Resources */,
@@ -473,14 +516,19 @@
 				FB55D57B254C323A00B8DF3D /* CustomServerTrustManager.swift in Sources */,
 				FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */,
 				FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */,
+				FB55D693254CCB0400B8DF3D /* CharacterListApiClient.swift in Sources */,
 				FB55D61C254C4D1700B8DF3D /* GetCharacterRequest.swift in Sources */,
+				FB55D692254CCB0400B8DF3D /* CharacterListViewController.swift in Sources */,
 				FB55D541254C1F9200B8DF3D /* UIViewController+Extensions.swift in Sources */,
+				FB55D694254CCB0400B8DF3D /* CharacterListViewModel.swift in Sources */,
 				FB55D4E3254C1BBC00B8DF3D /* AppDelegate.swift in Sources */,
 				FB55D573254C306900B8DF3D /* ErrorResponse.swift in Sources */,
 				FB55D56D254C305800B8DF3D /* APIRequest.swift in Sources */,
+				FB55D691254CCB0400B8DF3D /* CharacterListRouter.swift in Sources */,
 				FB55D5FD254C476E00B8DF3D /* ExtraDataListResponse.swift in Sources */,
 				FB55D58D254C350400B8DF3D /* GetCharactersRequest.swift in Sources */,
 				FB55D5D1254C3FFC00B8DF3D /* UrlResponse.swift in Sources */,
+				FB55D695254CCB0400B8DF3D /* CharacterListDataManager.swift in Sources */,
 				FB55D59A254C377100B8DF3D /* CharacterListResponse.swift in Sources */,
 				FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */,
 				FB55D580254C325700B8DF3D /* ParseDERCertificate.swift in Sources */,
