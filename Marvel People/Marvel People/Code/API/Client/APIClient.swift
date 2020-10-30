@@ -25,13 +25,6 @@ public class APIClient {
     private var baseEndpoint: String {
         return "https://\(Constants.host)/v1/public"
     }
-    private var defaultQueryParams: Parameters {
-        return [
-            "apikey" : "5ed58006f51feb029d1240da98b047c6",
-            "ts" : "1",
-            "hash" : "050b4ab4753325c5f5b3538c50e5c4e7"
-        ]
-    }
     
     // MARK: - Public functions
     
@@ -42,7 +35,13 @@ public class APIClient {
         let endpoint = self.endpoint(for: request)
         let method = request.method
         
-        var parameters: Parameters = defaultQueryParams
+        let timestamp = Date().timeIntervalSince1970.string
+        let hash = Constants.md5(string: timestamp + Constants.privateKey + Constants.publicKey)
+        
+        var parameters: Parameters = [:]
+        parameters[Constants.apiKeyQueryParam] = Constants.publicKey
+        parameters[Constants.tsQueryParam] = timestamp
+        parameters[Constants.hashQueryParam] = hash
         parameters += request.queryParams
         
         let request = session.request(endpoint,

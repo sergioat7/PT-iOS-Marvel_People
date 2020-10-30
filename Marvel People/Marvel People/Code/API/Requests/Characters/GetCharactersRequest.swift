@@ -33,7 +33,7 @@ class GetCharactersRequest: APIRequest {
         
         let offset = (page - 1) * Constants.limit
         queryParams = [Constants.limitQueryParam : "\(Constants.limit)"]
-        queryParams = [Constants.offsetQueryParam : "\(offset)"]
+        queryParams[Constants.offsetQueryParam] = "\(offset)"
         if let search = search {
             queryParams[Constants.nameStartsWithQueryParam] = search
         }
