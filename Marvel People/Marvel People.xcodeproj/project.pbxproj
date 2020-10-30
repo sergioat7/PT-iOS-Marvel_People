@@ -36,6 +36,8 @@
 		FB55D5EC254C471100B8DF3D /* ItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D5EB254C471100B8DF3D /* ItemResponse.swift */; };
 		FB55D5FD254C476E00B8DF3D /* ExtraDataListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D5FC254C476E00B8DF3D /* ExtraDataListResponse.swift */; };
 		FB55D61C254C4D1700B8DF3D /* GetCharacterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D61B254C4D1700B8DF3D /* GetCharacterRequest.swift */; };
+		FB55D66B254CC8DA00B8DF3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB55D66D254CC8DA00B8DF3D /* Localizable.strings */; };
+		FB55D67A254CC94500B8DF3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB55D67C254CC94500B8DF3D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		FB55D5EB254C471100B8DF3D /* ItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemResponse.swift; sourceTree = "<group>"; };
 		FB55D5FC254C476E00B8DF3D /* ExtraDataListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraDataListResponse.swift; sourceTree = "<group>"; };
 		FB55D61B254C4D1700B8DF3D /* GetCharacterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterRequest.swift; sourceTree = "<group>"; };
+		FB55D66C254CC8DA00B8DF3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB55D67B254CC94500B8DF3D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 			children = (
 				FB55D57A254C323A00B8DF3D /* CustomServerTrustManager.swift */,
 				FB55D4F0254C1BBC00B8DF3D /* Info.plist */,
+				FB55D662254CC8B400B8DF3D /* Localization */,
 				FB55D57F254C325700B8DF3D /* ParseDERCertificate.swift */,
 			);
 			path = Resources;
@@ -307,6 +312,15 @@
 			path = Character;
 			sourceTree = "<group>";
 		};
+		FB55D662254CC8B400B8DF3D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D66D254CC8DA00B8DF3D /* Localizable.strings */,
+				FB55D67C254CC94500B8DF3D /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +412,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = FB55D4D6254C1BBC00B8DF3D;
 			packageReferences = (
@@ -422,6 +437,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */,
+				FB55D67A254CC94500B8DF3D /* Localizable.strings in Resources */,
+				FB55D66B254CC8DA00B8DF3D /* Localizable.strings in Resources */,
 				FB55D4EC254C1BBC00B8DF3D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +528,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		FB55D66D254CC8DA00B8DF3D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB55D66C254CC8DA00B8DF3D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		FB55D67C254CC94500B8DF3D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB55D67B254CC94500B8DF3D /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -518,6 +551,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -579,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -637,6 +672,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel People/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,6 +692,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel People/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
