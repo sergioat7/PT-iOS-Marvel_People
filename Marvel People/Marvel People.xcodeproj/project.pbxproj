@@ -15,6 +15,10 @@
 		FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB55D4ED254C1BBC00B8DF3D /* LaunchScreen.storyboard */; };
 		FB55D4FA254C1BBC00B8DF3D /* Marvel_PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D4F9254C1BBC00B8DF3D /* Marvel_PeopleTests.swift */; };
 		FB55D505254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D504254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift */; };
+		FB55D525254C1D6A00B8DF3D /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D524254C1D6A00B8DF3D /* BaseDataManager.swift */; };
+		FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D52C254C1D7500B8DF3D /* BaseRouter.swift */; };
+		FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D531254C1E1900B8DF3D /* BaseViewController.swift */; };
+		FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D536254C1E2500B8DF3D /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		FB55D500254C1BBD00B8DF3D /* Marvel PeopleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel PeopleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB55D504254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_PeopleUITests.swift; sourceTree = "<group>"; };
 		FB55D506254C1BBD00B8DF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB55D524254C1D6A00B8DF3D /* BaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
+		FB55D52C254C1D7500B8DF3D /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		FB55D531254C1E1900B8DF3D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FB55D536254C1E2500B8DF3D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,7 @@
 		FB55D51E254C1C5500B8DF3D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FB55D523254C1D5300B8DF3D /* Base */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -166,6 +175,17 @@
 				FB55D4E6254C1BBC00B8DF3D /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB55D523254C1D5300B8DF3D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FB55D524254C1D6A00B8DF3D /* BaseDataManager.swift */,
+				FB55D52C254C1D7500B8DF3D /* BaseRouter.swift */,
+				FB55D531254C1E1900B8DF3D /* BaseViewController.swift */,
+				FB55D536254C1E2500B8DF3D /* BaseViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB55D525254C1D6A00B8DF3D /* BaseDataManager.swift in Sources */,
 				FB55D4E7254C1BBC00B8DF3D /* ViewController.swift in Sources */,
+				FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */,
+				FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */,
 				FB55D4E3254C1BBC00B8DF3D /* AppDelegate.swift in Sources */,
 				FB55D4E5254C1BBC00B8DF3D /* SceneDelegate.swift in Sources */,
+				FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Marvel People/Info.plist";
+				INFOPLIST_FILE = "Marvel People/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Marvel People/Info.plist";
+				INFOPLIST_FILE = "Marvel People/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
