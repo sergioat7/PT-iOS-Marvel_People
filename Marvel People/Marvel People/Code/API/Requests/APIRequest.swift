@@ -13,8 +13,14 @@ public protocol APIRequest {
     
     associatedtype Response: Decodable
     
+    // Endpoint for this request (the last part of the URL)
+    var resourceName: String { get }
+    
     //HTTP Method
     var method: HTTPMethod { get }
+    
+    //Parameters to be appended in url
+    var resourcePath: String { get }
     
     //Query parameters to be appended in url
     var queryParams: Parameters { get set }

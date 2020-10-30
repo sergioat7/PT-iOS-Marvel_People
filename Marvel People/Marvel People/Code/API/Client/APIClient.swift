@@ -39,7 +39,7 @@ public class APIClient {
                                    success: @escaping (T.Response) -> Void,
                                    failure: @escaping (ErrorResponse) -> Void) {
         
-        let endpoint = URL(string: baseEndpoint)!
+        let endpoint = self.endpoint(for: request)
         let method = request.method
         
         var parameters: Parameters = defaultQueryParams
@@ -74,6 +74,12 @@ public class APIClient {
     }
     
     // MARK: - Private functions
+    
+    private func endpoint<T: APIRequest>(for request: T) -> URL {
+        
+        let urlString = "\(baseEndpoint)\(request.resourceName)\(request.resourcePath)"
+        return URL(string: urlString)!
+    }
     
     private func mapErrorData(data: Data, failure: @escaping (ErrorResponse) -> Void) {
         

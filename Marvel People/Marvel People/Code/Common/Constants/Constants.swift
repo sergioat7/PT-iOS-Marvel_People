@@ -13,4 +13,5 @@ struct Constants {
     // MARK: - Network constants
     
     static let host = "gateway.marvel.com"
+    static let nameStartsWithQueryParam = "nameStartsWith"
 }
