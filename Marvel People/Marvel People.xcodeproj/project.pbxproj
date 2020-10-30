@@ -3,14 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FB55D4E3254C1BBC00B8DF3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D4E2254C1BBC00B8DF3D /* AppDelegate.swift */; };
-		FB55D4E5254C1BBC00B8DF3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D4E4254C1BBC00B8DF3D /* SceneDelegate.swift */; };
-		FB55D4E7254C1BBC00B8DF3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D4E6254C1BBC00B8DF3D /* ViewController.swift */; };
-		FB55D4EA254C1BBC00B8DF3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB55D4E8254C1BBC00B8DF3D /* Main.storyboard */; };
 		FB55D4EC254C1BBC00B8DF3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB55D4EB254C1BBC00B8DF3D /* Assets.xcassets */; };
 		FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB55D4ED254C1BBC00B8DF3D /* LaunchScreen.storyboard */; };
 		FB55D4FA254C1BBC00B8DF3D /* Marvel_PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D4F9254C1BBC00B8DF3D /* Marvel_PeopleTests.swift */; };
@@ -20,6 +17,10 @@
 		FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D531254C1E1900B8DF3D /* BaseViewController.swift */; };
 		FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D536254C1E2500B8DF3D /* BaseViewModel.swift */; };
 		FB55D541254C1F9200B8DF3D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D540254C1F9200B8DF3D /* UIViewController+Extensions.swift */; };
+		FB55D553254C2E7400B8DF3D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FB55D552254C2E7400B8DF3D /* Alamofire */; };
+		FB55D559254C2E9200B8DF3D /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FB55D558254C2E9200B8DF3D /* SwifterSwift */; };
+		FB55D55F254C2EBF00B8DF3D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FB55D55E254C2EBF00B8DF3D /* RxCocoa */; };
+		FB55D561254C2EBF00B8DF3D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FB55D560254C2EBF00B8DF3D /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +43,6 @@
 /* Begin PBXFileReference section */
 		FB55D4DF254C1BBC00B8DF3D /* Marvel People.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel People.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB55D4E2254C1BBC00B8DF3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB55D4E4254C1BBC00B8DF3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB55D4E6254C1BBC00B8DF3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB55D4E9254C1BBC00B8DF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB55D4EB254C1BBC00B8DF3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB55D4EE254C1BBC00B8DF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB55D4F0254C1BBC00B8DF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB55D55F254C2EBF00B8DF3D /* RxCocoa in Frameworks */,
+				FB55D553254C2E7400B8DF3D /* Alamofire in Frameworks */,
+				FB55D561254C2EBF00B8DF3D /* RxSwift in Frameworks */,
+				FB55D559254C2E9200B8DF3D /* SwifterSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +144,6 @@
 				FB55D4E2254C1BBC00B8DF3D /* AppDelegate.swift */,
 				FB55D51E254C1C5500B8DF3D /* Common */,
 				FB55D51F254C1C5A00B8DF3D /* Controllers */,
-				FB55D4E4254C1BBC00B8DF3D /* SceneDelegate.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -174,8 +175,6 @@
 		FB55D51F254C1C5A00B8DF3D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FB55D4E8254C1BBC00B8DF3D /* Main.storyboard */,
-				FB55D4E6254C1BBC00B8DF3D /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +222,12 @@
 			dependencies = (
 			);
 			name = "Marvel People";
+			packageProductDependencies = (
+				FB55D552254C2E7400B8DF3D /* Alamofire */,
+				FB55D558254C2E9200B8DF3D /* SwifterSwift */,
+				FB55D55E254C2EBF00B8DF3D /* RxCocoa */,
+				FB55D560254C2EBF00B8DF3D /* RxSwift */,
+			);
 			productName = "Marvel People";
 			productReference = FB55D4DF254C1BBC00B8DF3D /* Marvel People.app */;
 			productType = "com.apple.product-type.application";
@@ -294,6 +299,11 @@
 				Base,
 			);
 			mainGroup = FB55D4D6254C1BBC00B8DF3D;
+			packageReferences = (
+				FB55D551254C2E7400B8DF3D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FB55D557254C2E9200B8DF3D /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				FB55D55D254C2EBF00B8DF3D /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = FB55D4E0254C1BBC00B8DF3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,7 +322,6 @@
 			files = (
 				FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */,
 				FB55D4EC254C1BBC00B8DF3D /* Assets.xcassets in Resources */,
-				FB55D4EA254C1BBC00B8DF3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,12 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB55D525254C1D6A00B8DF3D /* BaseDataManager.swift in Sources */,
-				FB55D4E7254C1BBC00B8DF3D /* ViewController.swift in Sources */,
 				FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */,
 				FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */,
 				FB55D541254C1F9200B8DF3D /* UIViewController+Extensions.swift in Sources */,
 				FB55D4E3254C1BBC00B8DF3D /* AppDelegate.swift in Sources */,
-				FB55D4E5254C1BBC00B8DF3D /* SceneDelegate.swift in Sources */,
 				FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,14 +387,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FB55D4E8254C1BBC00B8DF3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB55D4E9254C1BBC00B8DF3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB55D4ED254C1BBC00B8DF3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -673,6 +672,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB55D551254C2E7400B8DF3D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+		FB55D557254C2E9200B8DF3D /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+		FB55D55D254C2EBF00B8DF3D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB55D552254C2E7400B8DF3D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB55D551254C2E7400B8DF3D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FB55D558254C2E9200B8DF3D /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB55D557254C2E9200B8DF3D /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+		FB55D55E254C2EBF00B8DF3D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB55D55D254C2EBF00B8DF3D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FB55D560254C2EBF00B8DF3D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB55D55D254C2EBF00B8DF3D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB55D4D7254C1BBC00B8DF3D /* Project object */;
 }
