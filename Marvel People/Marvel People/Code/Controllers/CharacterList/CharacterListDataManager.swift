@@ -7,20 +7,24 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol CharacterListDataManagerProtocol: class {
-    /**
-     * Add here your methods for communication VIEW_MODEL -> DATA_MANAGER
-     */
+    
+    func getCharacters(search: String?)
+    func resetPage()
+    func getCharactersObserver() -> PublishSubject<CharactersResponse>
+    func getErrorObserver() -> PublishSubject<ErrorResponse>
 }
 
 class CharacterListDataManager: BaseDataManager {
     
-    // MARK: - Public variables
+    // MARK: - Private variables
     
     private let apiClient: CharacterListApiClientProtocol
-    
-    // MARK: - Private variables
+    private let charactersObserver: PublishSubject<CharactersResponse> = PublishSubject()
+    private let disposeBag = DisposeBag()
+    private var page: Int = 1
     
     // MARK: - Initialization
     
@@ -31,5 +35,32 @@ class CharacterListDataManager: BaseDataManager {
 
 extension CharacterListDataManager: CharacterListDataManagerProtocol {
     
+    func getCharacters(search: String?) {
+        
+        apiClient.getCharacters(page: page,
+                                search: search)
+        
+        apiClient
+            .getCharactersDataObserver()
+            .subscribe(onNext: { [weak self] charactersDataResponse in
+                
+                guard let strongSelf = self else { return }
+                strongSelf.page += 1
+                strongSelf.charactersObserver.onNext(charactersDataResponse.data.results)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func resetPage() {
+        page = 1
+    }
+    
+    func getCharactersObserver() -> PublishSubject<CharactersResponse> {
+        return charactersObserver
+    }
+    
+    func getErrorObserver() -> PublishSubject<ErrorResponse> {
+        return apiClient.getErrorObserver()
+    }
 }
 
