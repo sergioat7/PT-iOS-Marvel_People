@@ -17,8 +17,6 @@
 		FB55D4E3254C1BBC00B8DF3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D4E2254C1BBC00B8DF3D /* AppDelegate.swift */; };
 		FB55D4EC254C1BBC00B8DF3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB55D4EB254C1BBC00B8DF3D /* Assets.xcassets */; };
 		FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB55D4ED254C1BBC00B8DF3D /* LaunchScreen.storyboard */; };
-		FB55D4FA254C1BBC00B8DF3D /* Marvel_PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D4F9254C1BBC00B8DF3D /* Marvel_PeopleTests.swift */; };
-		FB55D505254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D504254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift */; };
 		FB55D525254C1D6A00B8DF3D /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D524254C1D6A00B8DF3D /* BaseDataManager.swift */; };
 		FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D52C254C1D7500B8DF3D /* BaseRouter.swift */; };
 		FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D531254C1E1900B8DF3D /* BaseViewController.swift */; };
@@ -93,10 +91,8 @@
 		FB55D4EE254C1BBC00B8DF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB55D4F0254C1BBC00B8DF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB55D4F5254C1BBC00B8DF3D /* Marvel PeopleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel PeopleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB55D4F9254C1BBC00B8DF3D /* Marvel_PeopleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_PeopleTests.swift; sourceTree = "<group>"; };
 		FB55D4FB254C1BBC00B8DF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB55D500254C1BBD00B8DF3D /* Marvel PeopleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel PeopleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB55D504254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_PeopleUITests.swift; sourceTree = "<group>"; };
 		FB55D506254C1BBD00B8DF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB55D524254C1D6A00B8DF3D /* BaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataManager.swift; sourceTree = "<group>"; };
 		FB55D52C254C1D7500B8DF3D /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
@@ -132,6 +128,8 @@
 		FBE66FCA254EE8D40081801A /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		FBED84B3254F532200A1BC17 /* CharacterListTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterListTests.xctestplan; sourceTree = "<group>"; };
+		FBED84B4254F532F00A1BC17 /* CharacterDetailTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterDetailTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +245,10 @@
 		FB55D4F8254C1BBC00B8DF3D /* Marvel PeopleTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB55D4F9254C1BBC00B8DF3D /* Marvel_PeopleTests.swift */,
+				FBED84AD254F528600A1BC17 /* CharacterDetail */,
+				FBED84B4254F532F00A1BC17 /* CharacterDetailTests.xctestplan */,
+				FBED84AC254F527E00A1BC17 /* CharacterList */,
+				FBED84B3254F532200A1BC17 /* CharacterListTests.xctestplan */,
 				FB55D4FB254C1BBC00B8DF3D /* Info.plist */,
 			);
 			path = "Marvel PeopleTests";
@@ -256,7 +257,6 @@
 		FB55D503254C1BBD00B8DF3D /* Marvel PeopleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FB55D504254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift */,
 				FB55D506254C1BBD00B8DF3D /* Info.plist */,
 			);
 			path = "Marvel PeopleUITests";
@@ -479,6 +479,20 @@
 				FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		FBED84AC254F527E00A1BC17 /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		FBED84AD254F528600A1BC17 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -716,7 +730,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB55D4FA254C1BBC00B8DF3D /* Marvel_PeopleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +737,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB55D505254C1BBD00B8DF3D /* Marvel_PeopleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
