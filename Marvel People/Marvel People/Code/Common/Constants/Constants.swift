@@ -29,4 +29,8 @@ struct Constants {
         let computed = Insecure.MD5.hash(data: string.data(using: .utf8)!)
         return computed.map { String(format: "%02hhx", $0) }.joined()
     }
+    
+    // MARK: - Table view constants
+    
+    static let cellName = "CharacterCell"
 }

@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol CharacterListViewModelProtocol: class {
-    /**
-     * Add here your methods for communication VIEW -> VIEW_MODEL
-     */
+    
+    func viewDidLoad()
+    func getCharacterCellViewModelsObserver() -> BehaviorSubject<[CharacterCellViewModel]>
+    func getCharacterCellViewModelsObserverValue() -> [CharacterCellViewModel]
+    func getCharacters()
 }
 
 class CharacterListViewModel: BaseViewModel {
@@ -23,6 +26,8 @@ class CharacterListViewModel: BaseViewModel {
     // MARK: - Private variables
     
     private var dataManager: CharacterListDataManagerProtocol
+    private let characterCellViewModelsObserver: BehaviorSubject<[CharacterCellViewModel]> = BehaviorSubject(value: [])
+    private let disposeBag = DisposeBag()
     
     // MARK: - Initialization
     
@@ -35,5 +40,38 @@ class CharacterListViewModel: BaseViewModel {
 
 extension CharacterListViewModel: CharacterListViewModelProtocol {
     
+    func viewDidLoad() {
+        
+        getCharacters()
+        
+        dataManager
+            .getCharactersObserver()
+            .subscribe(onNext: { [weak self] charactersResponse in
+                
+                guard let strongSelf = self else { return }
+                var currentValue = strongSelf.getCharacterCellViewModelsObserverValue()
+                let newValues = charactersResponse.map({ CharacterCellViewModel(character: $0) })
+                currentValue.append(contentsOf: newValues)
+                strongSelf.characterCellViewModelsObserver.onNext(currentValue)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func getCharacterCellViewModelsObserver() -> BehaviorSubject<[CharacterCellViewModel]> {
+        return characterCellViewModelsObserver
+    }
+    
+    func getCharacterCellViewModelsObserverValue() -> [CharacterCellViewModel] {
+        
+        do {
+            return try characterCellViewModelsObserver.value()
+        } catch {
+            return []
+        }
+    }
+    
+    func getCharacters() {
+        dataManager.getCharacters(search: nil)
+    }
 }
 

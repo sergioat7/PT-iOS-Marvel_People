@@ -44,6 +44,9 @@
 		FB55D693254CCB0400B8DF3D /* CharacterListApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68D254CCB0400B8DF3D /* CharacterListApiClient.swift */; };
 		FB55D694254CCB0400B8DF3D /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68E254CCB0400B8DF3D /* CharacterListViewModel.swift */; };
 		FB55D695254CCB0400B8DF3D /* CharacterListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55D68F254CCB0400B8DF3D /* CharacterListDataManager.swift */; };
+		FBABE047254DC1F700656BD4 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBABE045254DC1F700656BD4 /* CharacterTableViewCell.swift */; };
+		FBABE048254DC1F700656BD4 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBABE046254DC1F700656BD4 /* CharacterTableViewCell.xib */; };
+		FBABE050254DC31D00656BD4 /* CharacterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBABE04F254DC31D00656BD4 /* CharacterCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		FB55D68D254CCB0400B8DF3D /* CharacterListApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListApiClient.swift; sourceTree = "<group>"; };
 		FB55D68E254CCB0400B8DF3D /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		FB55D68F254CCB0400B8DF3D /* CharacterListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDataManager.swift; sourceTree = "<group>"; };
+		FBABE045254DC1F700656BD4 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		FBABE046254DC1F700656BD4 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		FBABE04F254DC31D00656BD4 /* CharacterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,9 +364,28 @@
 		FB55D689254CCAF700B8DF3D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBABE043254DC1DB00656BD4 /* Cell */,
 				FB55D68A254CCB0400B8DF3D /* CharacterListView.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FBABE043254DC1DB00656BD4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBABE045254DC1F700656BD4 /* CharacterTableViewCell.swift */,
+				FBABE046254DC1F700656BD4 /* CharacterTableViewCell.xib */,
+				FBABE044254DC1E000656BD4 /* Model */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FBABE044254DC1E000656BD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBABE04F254DC31D00656BD4 /* CharacterCellViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +506,7 @@
 				FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */,
 				FB55D690254CCB0400B8DF3D /* CharacterListView.storyboard in Resources */,
 				FB55D67A254CC94500B8DF3D /* Localizable.strings in Resources */,
+				FBABE048254DC1F700656BD4 /* CharacterTableViewCell.xib in Resources */,
 				FB55D66B254CC8DA00B8DF3D /* Localizable.strings in Resources */,
 				FB55D4EC254C1BBC00B8DF3D /* Assets.xcassets in Resources */,
 			);
@@ -509,6 +535,7 @@
 			files = (
 				FB55D5A4254C3BCD00B8DF3D /* ThumbnailResponse.swift in Sources */,
 				FB55D59F254C37DE00B8DF3D /* CharactersDataResponse.swift in Sources */,
+				FBABE047254DC1F700656BD4 /* CharacterTableViewCell.swift in Sources */,
 				FB55D595254C374800B8DF3D /* CharacterResponse.swift in Sources */,
 				FB55D5EC254C471100B8DF3D /* ItemResponse.swift in Sources */,
 				FB55D525254C1D6A00B8DF3D /* BaseDataManager.swift in Sources */,
@@ -530,6 +557,7 @@
 				FB55D5D1254C3FFC00B8DF3D /* UrlResponse.swift in Sources */,
 				FB55D695254CCB0400B8DF3D /* CharacterListDataManager.swift in Sources */,
 				FB55D59A254C377100B8DF3D /* CharacterListResponse.swift in Sources */,
+				FBABE050254DC31D00656BD4 /* CharacterCellViewModel.swift in Sources */,
 				FB55D532254C1E1900B8DF3D /* BaseViewController.swift in Sources */,
 				FB55D580254C325700B8DF3D /* ParseDERCertificate.swift in Sources */,
 				FB55D586254C32EB00B8DF3D /* Constants.swift in Sources */,

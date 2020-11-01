@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol CharacterListViewProtocol: BaseViewProtocol {
     /**
@@ -25,9 +27,12 @@ class CharacterListViewController: BaseViewController {
     
     // MARK: - Public properties
     
+    @IBOutlet weak var tvCharacters: UITableView!
+    
     // MARK: - Private properties
     
     private var viewModel:CharacterListViewModelProtocol?
+    private let disposeBag = DisposeBag()
     
     // MARK: - View lifecycle
     
@@ -35,6 +40,9 @@ class CharacterListViewController: BaseViewController {
         super.viewDidLoad()
         
         title = "MARVEL_CHARACTERS".localized()
+        registerNib()
+        setupBindings()
+        viewModel?.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +55,49 @@ class CharacterListViewController: BaseViewController {
     
     // MARK: - Private functions
     
+    private func registerNib() {
+        
+        tvCharacters.register(UINib(nibName: "CharacterTableViewCell",
+                                    bundle: nil),
+                              forCellReuseIdentifier: Constants.cellName)
+    }
+    
+    private func setupBindings() {
+        
+        tvCharacters
+            .rx
+            .willDisplayCell
+            .subscribe(onNext: ({ [weak self] (cell,indexPath) in
+                
+                guard let strongSelf = self else { return }
+                let characterCellViewModelsCount = strongSelf.viewModel?.getCharacterCellViewModelsObserverValue().count ?? 0
+                if indexPath.item == (characterCellViewModelsCount - 1) {
+                    //TODO load more items
+                }
+            }))
+            .disposed(by: disposeBag)
+        
+        tvCharacters
+            .rx
+            .itemSelected
+            .subscribe(onNext:{ [weak self] indexPath in
+                
+                guard let strongSelf = self else { return }
+                let characterCellViewModels = strongSelf.viewModel?.getCharacterCellViewModelsObserverValue()
+                if let characterId = characterCellViewModels?[indexPath.row].id {
+                    //TODO go to character detail
+                    print(characterId)
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel?
+            .getCharacterCellViewModelsObserver()
+            .bind(to: tvCharacters.rx.items(cellIdentifier: Constants.cellName, cellType: CharacterTableViewCell.self)) { _,character,cell in
+                cell.characterCellViewModel = character
+            }
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: - CharacterListViewProtocol
