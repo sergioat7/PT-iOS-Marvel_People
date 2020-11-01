@@ -49,6 +49,8 @@
 		FBABE047254DC1F700656BD4 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBABE045254DC1F700656BD4 /* CharacterTableViewCell.swift */; };
 		FBABE048254DC1F700656BD4 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBABE046254DC1F700656BD4 /* CharacterTableViewCell.xib */; };
 		FBABE050254DC31D00656BD4 /* CharacterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBABE04F254DC31D00656BD4 /* CharacterCellViewModel.swift */; };
+		FBE66FCC254EE8D40081801A /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE66FCA254EE8D40081801A /* SFProDisplay-Bold.ttf */; };
+		FBE66FCD254EE8D40081801A /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		FBABE045254DC1F700656BD4 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		FBABE046254DC1F700656BD4 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		FBABE04F254DC31D00656BD4 /* CharacterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModel.swift; sourceTree = "<group>"; };
+		FBE66FCA254EE8D40081801A /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				FB55D57A254C323A00B8DF3D /* CustomServerTrustManager.swift */,
+				FBE66FC9254EE82C0081801A /* Font */,
 				FB55D4F0254C1BBC00B8DF3D /* Info.plist */,
 				FB55D662254CC8B400B8DF3D /* Localization */,
 				FB55D57F254C325700B8DF3D /* ParseDERCertificate.swift */,
@@ -414,6 +419,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FBE66FC9254EE82C0081801A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FBE66FCA254EE8D40081801A /* SFProDisplay-Bold.ttf */,
+				FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -536,7 +550,9 @@
 				FB55D4EF254C1BBC00B8DF3D /* LaunchScreen.storyboard in Resources */,
 				FB55D690254CCB0400B8DF3D /* CharacterListView.storyboard in Resources */,
 				FB55D67A254CC94500B8DF3D /* Localizable.strings in Resources */,
+				FBE66FCD254EE8D40081801A /* SFProDisplay-Regular.ttf in Resources */,
 				FBABE048254DC1F700656BD4 /* CharacterTableViewCell.xib in Resources */,
+				FBE66FCC254EE8D40081801A /* SFProDisplay-Bold.ttf in Resources */,
 				FB55D66B254CC8DA00B8DF3D /* Localizable.strings in Resources */,
 				FB55D4EC254C1BBC00B8DF3D /* Assets.xcassets in Resources */,
 			);
