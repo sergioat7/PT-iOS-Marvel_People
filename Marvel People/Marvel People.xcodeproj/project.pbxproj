@@ -62,6 +62,9 @@
 		FBED84F0254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */; };
 		FBED84F8254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84F7254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift */; };
 		FBED8503254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED8502254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift */; };
+		FBED8508254F69E700A1BC17 /* CharacterListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED8507254F69E700A1BC17 /* CharacterListViewTests.swift */; };
+		FBED850C254F69F500A1BC17 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB55D66D254CC8DA00B8DF3D /* Localizable.strings */; };
+		FBED8510254F69F700A1BC17 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB55D67C254CC94500B8DF3D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,8 @@
 		FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailApiClientTests.swift; sourceTree = "<group>"; };
 		FBED84F7254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataManagerTests.swift; sourceTree = "<group>"; };
 		FBED8502254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModelTests.swift; sourceTree = "<group>"; };
+		FBED8507254F69E700A1BC17 /* CharacterListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewTests.swift; sourceTree = "<group>"; };
+		FBED8514254F6A7D00A1BC17 /* UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,7 +274,9 @@
 		FB55D503254C1BBD00B8DF3D /* Marvel PeopleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FBED8507254F69E700A1BC17 /* CharacterListViewTests.swift */,
 				FB55D506254C1BBD00B8DF3D /* Info.plist */,
+				FBED8514254F6A7D00A1BC17 /* UITests.xctestplan */,
 			);
 			path = "Marvel PeopleUITests";
 			sourceTree = "<group>";
@@ -673,6 +680,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBED850C254F69F500A1BC17 /* Localizable.strings in Resources */,
+				FBED8510254F69F700A1BC17 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBED8508254F69E700A1BC17 /* CharacterListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
