@@ -57,6 +57,7 @@
 		FBE66FCD254EE8D40081801A /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */; };
 		FBED84A2254F488A00A1BC17 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */; };
 		FBED84C3254F53CF00A1BC17 /* CharacterListApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */; };
+		FBED84D3254F55D300A1BC17 /* CharacterListDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84D2254F55D300A1BC17 /* CharacterListDataManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		FBED84B3254F532200A1BC17 /* CharacterListTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterListTests.xctestplan; sourceTree = "<group>"; };
 		FBED84B4254F532F00A1BC17 /* CharacterDetailTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterDetailTests.xctestplan; sourceTree = "<group>"; };
 		FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListApiClientTests.swift; sourceTree = "<group>"; };
+		FBED84D2254F55D300A1BC17 /* CharacterListDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDataManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				FBED84C1254F538800A1BC17 /* APIClient */,
+				FBED84D2254F55D300A1BC17 /* CharacterListDataManagerTests.swift */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBED84C3254F53CF00A1BC17 /* CharacterListApiClientTests.swift in Sources */,
+				FBED84D3254F55D300A1BC17 /* CharacterListDataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  CharacterListApiClientTests.swift
+//  CharacterListDataManagerTests.swift
 //  Marvel PeopleTests
 //
 //  Created by Sergio Aragonés on 01/11/2020.
@@ -11,15 +11,15 @@ import RxSwift
 import RxCocoa
 @testable import Marvel_People
 
-class CharacterListApiClientTests: XCTestCase {
+class CharacterListDataManagerTests: XCTestCase {
     
-    var sut: CharacterListApiClient!
+    var sut: CharacterListDataManager!
     let disposeBag = DisposeBag()
-    
+
     override func setUpWithError() throws {
         
         super.setUp()
-        sut = CharacterListApiClient()
+        sut = CharacterListDataManager(apiClient: CharacterListApiClient())
     }
 
     override func tearDownWithError() throws {
@@ -27,18 +27,18 @@ class CharacterListApiClientTests: XCTestCase {
         sut = nil
         super.tearDown()
     }
-
+    
     func testGetDefaultCharacters() {
         
         var characters: CharactersResponse?
         
         let promise = expectation(description: "Search successful")
-        sut.getCharacters(page: 1, search: nil)
+        sut.getCharacters(search: nil)
         sut
-            .getCharactersDataObserver()
-            .subscribe(onNext: { charactersDataResponse in
+            .getCharactersObserver()
+            .subscribe(onNext: { charactersResponse in
                 
-                characters = charactersDataResponse.data.results
+                characters = charactersResponse
                 promise.fulfill()
             })
             .disposed(by: disposeBag)
@@ -53,12 +53,12 @@ class CharacterListApiClientTests: XCTestCase {
         var characters: CharactersResponse?
         
         let promise = expectation(description: "Search successful")
-        sut.getCharacters(page: 1, search: "spider")
+        sut.getCharacters(search: "spider")
         sut
-            .getCharactersDataObserver()
-            .subscribe(onNext: { charactersDataResponse in
+            .getCharactersObserver()
+            .subscribe(onNext: { charactersResponse in
                 
-                characters = charactersDataResponse.data.results
+                characters = charactersResponse
                 promise.fulfill()
             })
             .disposed(by: disposeBag)
@@ -73,7 +73,7 @@ class CharacterListApiClientTests: XCTestCase {
         var error: ErrorResponse?
         
         let promise = expectation(description: "Search unsuccessful")
-        sut.getCharacters(page: 1, search: "")
+        sut.getCharacters(search: "")
         sut
             .getErrorObserver()
             .subscribe(onNext: { errorResponse in
