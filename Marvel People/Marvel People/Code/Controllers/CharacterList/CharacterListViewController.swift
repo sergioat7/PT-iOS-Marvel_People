@@ -46,10 +46,6 @@ class CharacterListViewController: BaseViewController {
         super.viewWillAppear(animated)
     }
     
-    // MARK: - Actions
-    
-    // MARK: - Overrides
-    
     // MARK: - Private functions
     
     private func configViews() {

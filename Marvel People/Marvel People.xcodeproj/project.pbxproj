@@ -61,6 +61,7 @@
 		FBED84E6254F57CB00A1BC17 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84E5254F57CB00A1BC17 /* CharacterListViewModelTests.swift */; };
 		FBED84F0254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */; };
 		FBED84F8254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84F7254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift */; };
+		FBED8503254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED8502254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		FBED84E5254F57CB00A1BC17 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
 		FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailApiClientTests.swift; sourceTree = "<group>"; };
 		FBED84F7254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataManagerTests.swift; sourceTree = "<group>"; };
+		FBED8502254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +508,7 @@
 			children = (
 				FBED84C1254F538800A1BC17 /* APIClient */,
 				FBED84F7254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift */,
+				FBED8502254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBED84C3254F53CF00A1BC17 /* CharacterListApiClientTests.swift in Sources */,
+				FBED8503254F5DD900A1BC17 /* CharacterDetailViewModelTests.swift in Sources */,
 				FBED84E6254F57CB00A1BC17 /* CharacterListViewModelTests.swift in Sources */,
 				FBED84F8254F5CAB00A1BC17 /* CharacterDetailDataManagerTests.swift in Sources */,
 				FBED84F0254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift in Sources */,

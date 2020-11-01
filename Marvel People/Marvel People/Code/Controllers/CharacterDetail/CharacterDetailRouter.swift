@@ -19,8 +19,7 @@ class CharacterDetailRouter: BaseRouter {
         let storyboard: UIStoryboard = UIStoryboard(name: "CharacterDetailView", bundle: nil)
         if let controller = storyboard.instantiateViewController(withIdentifier: "CharacterDetail") as? CharacterDetailViewController {
             
-            let viewModel: CharacterDetailViewModelProtocol = CharacterDetailViewModel(view: controller,
-                                                                                       dataManager: dataManager)
+            let viewModel: CharacterDetailViewModelProtocol = CharacterDetailViewModel(dataManager: dataManager)
             controller.set(viewModel: viewModel)
             return controller
         }

@@ -15,8 +15,10 @@ class CharacterListRouter: BaseRouter {
     // MARK: - Private variables
     
     private var view:CharacterListViewController {
+        
         let storyboard: UIStoryboard = UIStoryboard(name: "CharacterListView", bundle: nil)
         if let controller = storyboard.instantiateViewController(withIdentifier: "CharacterList") as? CharacterListViewController {
+            
             let viewModel: CharacterListViewModelProtocol = CharacterListViewModel(dataManager: dataManager)
             controller.set(viewModel: viewModel)
             return controller
