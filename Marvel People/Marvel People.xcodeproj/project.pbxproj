@@ -57,6 +57,7 @@
 		FBABE050254DC31D00656BD4 /* CharacterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBABE04F254DC31D00656BD4 /* CharacterCellViewModel.swift */; };
 		FBE66FCC254EE8D40081801A /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE66FCA254EE8D40081801A /* SFProDisplay-Bold.ttf */; };
 		FBE66FCD254EE8D40081801A /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */; };
+		FBED84A2254F488A00A1BC17 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		FBABE04F254DC31D00656BD4 /* CharacterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellViewModel.swift; sourceTree = "<group>"; };
 		FBE66FCA254EE8D40081801A /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 		FB55D53E254C1F7C00B8DF3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FBED84A0254F487600A1BC17 /* UIFont */,
 				FB55D53F254C1F8700B8DF3D /* UIViewController */,
 			);
 			path = Extensions;
@@ -468,6 +471,14 @@
 				FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		FBED84A0254F487600A1BC17 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +685,7 @@
 				FB55D568254C304B00B8DF3D /* APIClient.swift in Sources */,
 				FB55D57B254C323A00B8DF3D /* CustomServerTrustManager.swift in Sources */,
 				FB55D52D254C1D7500B8DF3D /* BaseRouter.swift in Sources */,
+				FBED84A2254F488A00A1BC17 /* UIFont+Extension.swift in Sources */,
 				FB55D537254C1E2500B8DF3D /* BaseViewModel.swift in Sources */,
 				FB55D693254CCB0400B8DF3D /* CharacterListApiClient.swift in Sources */,
 				FB55D61C254C4D1700B8DF3D /* GetCharacterRequest.swift in Sources */,
