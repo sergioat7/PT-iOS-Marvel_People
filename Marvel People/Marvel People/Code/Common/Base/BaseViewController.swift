@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import PopupDialog
 
 protocol BaseViewProtocol: class {
-    
+    func showError(message: String, handler: (() -> Void)?)
 }
 
 class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.black
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -25,4 +29,38 @@ class BaseViewController: UIViewController {
         print(message)
     }
     
+    // MARK: - BaseViewProtocol
+    
+    func showError(message: String, handler: (() -> Void)?) {
+        
+        let popup = PopupDialog(title: "APP_NAME".localized(),
+                                message: message.localized())
+        setupDialog()
+        
+        let button = DefaultButton(title: "ERROR_BUTTON_ACCEPT".localized(),
+                                   dismissOnTap: true) {
+            handler?()
+        }
+     
+        popup.addButtons([button])
+        present(popup,
+                animated: true,
+                completion: nil)
+    }
+    
+    // MARK: - Private functions
+    
+    private func setupDialog() {
+        
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        
+        dialogAppearance.backgroundColor = .white
+        dialogAppearance.titleColor = .black
+        dialogAppearance.titleTextAlignment = .center
+        dialogAppearance.messageColor = .black
+        dialogAppearance.messageTextAlignment = .center
+        
+        let buttonAppearance = DefaultButton.appearance()
+        buttonAppearance.titleColor = .black
+    }
 }

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "D98B9F9A-D844-43F5-8028-736332057CF1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Marvel People.xcodeproj",
+        "identifier" : "FB55D4FF254C1BBD00B8DF3D",
+        "name" : "Marvel PeopleUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
