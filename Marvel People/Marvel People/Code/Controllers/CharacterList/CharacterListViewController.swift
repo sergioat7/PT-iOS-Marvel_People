@@ -107,6 +107,14 @@ class CharacterListViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         viewModel?
+            .getErrorObserver()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] errorResponse in
+                //TODO show error
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel?
             .getCharacterCellViewModelsObserver()
             .bind(to: tvCharacters.rx.items(cellIdentifier: Constants.cellName, cellType: CharacterTableViewCell.self)) { _,character,cell in
                 cell.characterCellViewModel = character
