@@ -13,6 +13,7 @@
 // Character list
 
 "MARVEL_CHARACTERS" = "Personajes Marvel";
+"SEARCH_CHARACTERS" = "Buscar personajes";
 "MORE_INFO" = "Más info";
 
 // Errors

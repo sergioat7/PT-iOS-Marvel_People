@@ -14,9 +14,7 @@ protocol CharacterListViewProtocol: BaseViewProtocol {
 }
 
 protocol CharacterListConfigurableViewProtocol: class {
-    
     func set(viewModel: CharacterListViewModelProtocol)
-    
 }
 
 class CharacterListViewController: BaseViewController {
@@ -31,6 +29,7 @@ class CharacterListViewController: BaseViewController {
     private var viewModel:CharacterListViewModelProtocol?
     private let disposeBag = DisposeBag()
     private let refreshControl = UIRefreshControl.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - View lifecycle
     
@@ -41,6 +40,7 @@ class CharacterListViewController: BaseViewController {
         configViews()
         registerNib()
         setupBindings()
+        creatingSearchBar()
         viewModel?.viewDidLoad()
     }
     
@@ -125,19 +125,43 @@ class CharacterListViewController: BaseViewController {
         viewModel?.reloadData()
         viewModel?.getCharacters()
     }
+    
+    private func creatingSearchBar() {
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "SEARCH_CHARACTERS".localized()
+        navigationItem.searchController = searchController
+     }
 }
 
 // MARK: - CharacterListViewProtocol
 
-extension CharacterListViewController:  CharacterListViewProtocol {
+extension CharacterListViewController: CharacterListViewProtocol {
 }
 
 // MARK: - CharacterListViewProtocol
 
-extension CharacterListViewController:  CharacterListConfigurableViewProtocol {
+extension CharacterListViewController: CharacterListConfigurableViewProtocol {
     
     func set(viewModel: CharacterListViewModelProtocol) {
         self.viewModel = viewModel
     }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension CharacterListViewController: UISearchResultsUpdating {
     
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        var search = searchController.searchBar.text
+        if search != nil && search!.isEmpty {
+            search = nil
+        }
+        aiLoading.startAnimating()
+        viewModel?.reloadData()
+        viewModel?.setSearch(search: search)
+        viewModel?.getCharacters()
+    }
 }

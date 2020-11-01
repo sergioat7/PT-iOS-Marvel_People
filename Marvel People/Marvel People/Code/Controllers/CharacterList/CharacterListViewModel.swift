@@ -18,6 +18,7 @@ protocol CharacterListViewModelProtocol: class {
     func getCharacterCellViewModelsObserverValue() -> [CharacterCellViewModel]
     func getCharacters()
     func reloadData()
+    func setSearch(search: String?)
 }
 
 class CharacterListViewModel: BaseViewModel {
@@ -33,6 +34,7 @@ class CharacterListViewModel: BaseViewModel {
     private let errorObserver: PublishSubject<ErrorResponse> = PublishSubject()
     private let characterCellViewModelsObserver: BehaviorSubject<[CharacterCellViewModel]> = BehaviorSubject(value: [])
     private let disposeBag = DisposeBag()
+    private var search: String?
     
     // MARK: - Initialization
     
@@ -97,13 +99,17 @@ extension CharacterListViewModel: CharacterListViewModelProtocol {
     }
     
     func getCharacters() {
-        dataManager.getCharacters(search: nil)
+        dataManager.getCharacters(search: search)
     }
     
     func reloadData() {
         
         dataManager.resetPage()
         characterCellViewModelsObserver.onNext([])
+    }
+    
+    func setSearch(search: String?) {
+        self.search = search
     }
 }
 
