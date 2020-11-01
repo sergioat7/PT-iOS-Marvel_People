@@ -12,6 +12,7 @@ import RxSwift
 protocol CharacterListViewModelProtocol: class {
     
     func viewDidLoad()
+    func getLoadingObserver() -> PublishSubject<Bool>
     func getCharacterCellViewModelsObserver() -> BehaviorSubject<[CharacterCellViewModel]>
     func getCharacterCellViewModelsObserverValue() -> [CharacterCellViewModel]
     func getCharacters()
@@ -26,6 +27,7 @@ class CharacterListViewModel: BaseViewModel {
     // MARK: - Private variables
     
     private var dataManager: CharacterListDataManagerProtocol
+    private let loadingObserver: PublishSubject<Bool> = PublishSubject()
     private let characterCellViewModelsObserver: BehaviorSubject<[CharacterCellViewModel]> = BehaviorSubject(value: [])
     private let disposeBag = DisposeBag()
     
@@ -42,6 +44,7 @@ extension CharacterListViewModel: CharacterListViewModelProtocol {
     
     func viewDidLoad() {
         
+        loadingObserver.onNext(true)
         getCharacters()
         
         dataManager
@@ -53,8 +56,13 @@ extension CharacterListViewModel: CharacterListViewModelProtocol {
                 let newValues = charactersResponse.map({ CharacterCellViewModel(character: $0) })
                 currentValue.append(contentsOf: newValues)
                 strongSelf.characterCellViewModelsObserver.onNext(currentValue)
+                strongSelf.loadingObserver.onNext(false)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func getLoadingObserver() -> PublishSubject<Bool> {
+        return loadingObserver
     }
     
     func getCharacterCellViewModelsObserver() -> BehaviorSubject<[CharacterCellViewModel]> {

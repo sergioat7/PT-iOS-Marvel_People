@@ -28,6 +28,7 @@ class CharacterListViewController: BaseViewController {
     // MARK: - Public properties
     
     @IBOutlet weak var tvCharacters: UITableView!
+    @IBOutlet weak var aiLoading: UIActivityIndicatorView!
     
     // MARK: - Private properties
     
@@ -89,6 +90,11 @@ class CharacterListViewController: BaseViewController {
                     print(characterId)
                 }
             })
+            .disposed(by: disposeBag)
+        
+        viewModel?
+            .getLoadingObserver()
+            .bind(to: aiLoading.rx.isAnimating)
             .disposed(by: disposeBag)
         
         viewModel?
