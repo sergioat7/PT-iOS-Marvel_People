@@ -10,9 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol CharacterListViewProtocol: BaseViewProtocol {
-}
-
 protocol CharacterListConfigurableViewProtocol: class {
     func set(viewModel: CharacterListViewModelProtocol)
 }
@@ -140,11 +137,6 @@ class CharacterListViewController: BaseViewController {
         searchController.searchBar.placeholder = "SEARCH_CHARACTERS".localized()
         navigationItem.searchController = searchController
      }
-}
-
-// MARK: - CharacterListViewProtocol
-
-extension CharacterListViewController: CharacterListViewProtocol {
 }
 
 // MARK: - CharacterListViewProtocol
