@@ -23,10 +23,11 @@ class CharacterListViewController: BaseViewController {
     
     @IBOutlet weak var tvCharacters: UITableView!
     @IBOutlet weak var aiLoading: UIActivityIndicatorView!
+    @IBOutlet weak var ivNoResults: UIImageView!
     
     // MARK: - Private properties
     
-    private var viewModel:CharacterListViewModelProtocol?
+    private var viewModel: CharacterListViewModelProtocol?
     private let disposeBag = DisposeBag()
     private let refreshControl = UIRefreshControl.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
     private let searchController = UISearchController(searchResultsController: nil)
@@ -36,7 +37,7 @@ class CharacterListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "MARVEL_CHARACTERS".localized()
+        navigationItem.title = "MARVEL_CHARACTERS".localized()
         configViews()
         registerNib()
         setupBindings()
@@ -91,8 +92,7 @@ class CharacterListViewController: BaseViewController {
                 guard let strongSelf = self else { return }
                 let characterCellViewModels = strongSelf.viewModel?.getCharacterCellViewModelsObserverValue()
                 if let characterId = characterCellViewModels?[indexPath.row].id {
-                    //TODO go to character detail
-                    print(characterId)
+                    CharacterDetailRouter(characterId: characterId).push()
                 }
             })
             .disposed(by: disposeBag)
@@ -117,6 +117,13 @@ class CharacterListViewController: BaseViewController {
             .bind(to: tvCharacters.rx.items(cellIdentifier: Constants.cellName, cellType: CharacterTableViewCell.self)) { _,character,cell in
                 cell.characterCellViewModel = character
             }
+            .disposed(by: disposeBag)
+        
+        viewModel?
+            .getCharacterCellViewModelsObserver()
+            .subscribe(onNext: { [weak self] characters in
+                self?.ivNoResults.isHidden = characters.count > 0
+            })
             .disposed(by: disposeBag)
     }
     

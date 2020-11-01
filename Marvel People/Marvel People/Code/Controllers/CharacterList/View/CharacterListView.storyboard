@@ -22,6 +22,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nojobsfound" translatesAutoresizingMaskIntoConstraints="NO" id="dti-4a-0d7">
+                                <rect key="frame" x="20" y="159" width="335" height="349"/>
+                            </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="jBR-pO-kvL">
                                 <rect key="frame" x="0.0" y="311" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,11 +37,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SSu-oc-fuM" secondAttribute="bottom" id="0al-DN-2a6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SSu-oc-fuM" secondAttribute="trailing" id="7X3-72-ypQ"/>
                             <constraint firstItem="SSu-oc-fuM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EO8-C6-W6P"/>
+                            <constraint firstItem="dti-4a-0d7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NqL-Pq-0Pu"/>
                             <constraint firstItem="SSu-oc-fuM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sis-Bi-N5k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dti-4a-0d7" secondAttribute="bottom" constant="20" id="U4e-A1-B9o"/>
+                            <constraint firstItem="dti-4a-0d7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vi5-xQ-80O"/>
+                            <constraint firstItem="dti-4a-0d7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pp0-Uh-deM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dti-4a-0d7" secondAttribute="trailing" constant="20" id="wML-OO-SPY"/>
+                            <constraint firstItem="dti-4a-0d7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yjJ-df-sCK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="aiLoading" destination="jBR-pO-kvL" id="xAG-3u-jSq"/>
+                        <outlet property="ivNoResults" destination="dti-4a-0d7" id="6pH-6z-n2l"/>
                         <outlet property="tvCharacters" destination="SSu-oc-fuM" id="8ui-0S-4yA"/>
                     </connections>
                 </viewController>
@@ -48,6 +58,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="nojobsfound" width="859" height="349"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

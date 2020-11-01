@@ -32,11 +32,17 @@ class CharacterTableViewCell: UITableViewCell {
             ivCharacter.kf.indicatorType = .activity
             ivCharacter.kf.setImage(with: imageUrl)
         } else {
-            ivCharacter.image = nil
+            ivCharacter.image = UIImage(named: "noimage")
         }
         
-        lbName.text = characterCellViewModel?.name ?? ""
-        lbDescription.text = characterCellViewModel?.description ?? ""
-        lbMoreInfo.text = "MORE_INFO".localized()
+        lbName.attributedText = NSAttributedString(string: characterCellViewModel?.name ?? "",
+                                                   attributes: [.font : UIFont.bold17,
+                                                                .foregroundColor: UIColor.black])
+        lbDescription.attributedText = NSAttributedString(string: characterCellViewModel?.description ?? "",
+                                                          attributes: [.font : UIFont.regular15,
+                                                                       .foregroundColor: UIColor.black])
+        lbMoreInfo.attributedText = NSAttributedString(string: "MORE_INFO".localized(),
+                                                       attributes: [.font : UIFont.regular12,
+                                                                    .foregroundColor: UIColor.black])
     }
 }
