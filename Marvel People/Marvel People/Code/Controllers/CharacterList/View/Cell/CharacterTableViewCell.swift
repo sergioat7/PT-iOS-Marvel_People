@@ -32,7 +32,7 @@ class CharacterTableViewCell: UITableViewCell {
             ivCharacter.kf.indicatorType = .activity
             ivCharacter.kf.setImage(with: imageUrl)
         } else {
-            ivCharacter.image = nil
+            ivCharacter.image = UIImage(named: "noimage")
         }
         
         lbName.attributedText = NSAttributedString(string: characterCellViewModel?.name ?? "",

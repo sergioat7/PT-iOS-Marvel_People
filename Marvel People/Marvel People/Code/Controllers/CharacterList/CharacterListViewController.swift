@@ -23,6 +23,7 @@ class CharacterListViewController: BaseViewController {
     
     @IBOutlet weak var tvCharacters: UITableView!
     @IBOutlet weak var aiLoading: UIActivityIndicatorView!
+    @IBOutlet weak var ivNoResults: UIImageView!
     
     // MARK: - Private properties
     
@@ -116,6 +117,13 @@ class CharacterListViewController: BaseViewController {
             .bind(to: tvCharacters.rx.items(cellIdentifier: Constants.cellName, cellType: CharacterTableViewCell.self)) { _,character,cell in
                 cell.characterCellViewModel = character
             }
+            .disposed(by: disposeBag)
+        
+        viewModel?
+            .getCharacterCellViewModelsObserver()
+            .subscribe(onNext: { [weak self] characters in
+                self?.ivNoResults.isHidden = characters.count > 0
+            })
             .disposed(by: disposeBag)
     }
     
