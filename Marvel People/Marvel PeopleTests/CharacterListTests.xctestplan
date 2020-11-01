@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "D0C590C7-3BF8-492C-AF43-8855316626BA",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "CharacterDetailApiClientTests",
+        "CharacterDetailDataManagerTests",
+        "CharacterDetailViewModelTests"
+      ],
+      "target" : {
+        "containerPath" : "container:Marvel People.xcodeproj",
+        "identifier" : "FB55D4F4254C1BBC00B8DF3D",
+        "name" : "Marvel PeopleTests"
+      }
+    }
+  ],
+  "version" : 1
+}

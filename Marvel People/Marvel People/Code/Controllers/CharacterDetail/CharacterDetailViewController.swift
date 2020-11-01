@@ -10,9 +10,6 @@ import UIKit
 import RxSwift
 import Kingfisher
 
-protocol CharacterDetailViewProtocol: BaseViewProtocol {
-}
-
 protocol CharacterDetailConfigurableViewProtocol: class {
     
     func set(viewModel: CharacterDetailViewModelProtocol)
@@ -44,10 +41,6 @@ class CharacterDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-    // MARK: - Actions
-    
-    // MARK: - Overrides
     
     // MARK: - Private functions
     
@@ -94,11 +87,6 @@ class CharacterDetailViewController: BaseViewController {
                                                           attributes: [.font : UIFont.regular17,
                                                                        .foregroundColor: UIColor.black])
     }
-}
-
-// MARK: - CharacterDetailViewProtocol
-
-extension CharacterDetailViewController: CharacterDetailViewProtocol {
 }
 
 // MARK: - CharacterDetailViewProtocol

@@ -19,10 +19,6 @@ protocol CharacterDetailViewModelProtocol: class {
 
 class CharacterDetailViewModel: BaseViewModel {
     
-    // MARK: - Public variables
-    
-    weak var view:CharacterDetailViewProtocol?
-    
     // MARK: - Private variables
     
     private var dataManager: CharacterDetailDataManagerProtocol
@@ -33,9 +29,7 @@ class CharacterDetailViewModel: BaseViewModel {
     
     // MARK: - Initialization
     
-    init(view:CharacterDetailViewProtocol,
-         dataManager: CharacterDetailDataManagerProtocol) {
-        self.view = view
+    init(dataManager: CharacterDetailDataManagerProtocol) {
         self.dataManager = dataManager
     }
 }
@@ -44,6 +38,7 @@ extension CharacterDetailViewModel: CharacterDetailViewModelProtocol {
     
     func viewDidLoad() {
         
+        loadingObserver.onNext(true)
         dataManager.getCharacter()
         
         dataManager
