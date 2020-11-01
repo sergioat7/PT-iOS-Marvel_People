@@ -12,7 +12,16 @@
 
   },
   "testTargets" : [
-
+    {
+      "skippedTests" : [
+        "CharacterDetailApiClientTests"
+      ],
+      "target" : {
+        "containerPath" : "container:Marvel People.xcodeproj",
+        "identifier" : "FB55D4F4254C1BBC00B8DF3D",
+        "name" : "Marvel PeopleTests"
+      }
+    }
   ],
   "version" : 1
 }

@@ -59,6 +59,7 @@
 		FBED84C3254F53CF00A1BC17 /* CharacterListApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */; };
 		FBED84D3254F55D300A1BC17 /* CharacterListDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84D2254F55D300A1BC17 /* CharacterListDataManagerTests.swift */; };
 		FBED84E6254F57CB00A1BC17 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84E5254F57CB00A1BC17 /* CharacterListViewModelTests.swift */; };
+		FBED84F0254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListApiClientTests.swift; sourceTree = "<group>"; };
 		FBED84D2254F55D300A1BC17 /* CharacterListDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDataManagerTests.swift; sourceTree = "<group>"; };
 		FBED84E5254F57CB00A1BC17 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
+		FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailApiClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +492,7 @@
 		FBED84AC254F527E00A1BC17 /* CharacterList */ = {
 			isa = PBXGroup;
 			children = (
+				FBED84EE254F5AB700A1BC17 /* APIClient */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -508,6 +511,14 @@
 			isa = PBXGroup;
 			children = (
 				FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		FBED84EE254F5AB700A1BC17 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -751,6 +762,7 @@
 			files = (
 				FBED84C3254F53CF00A1BC17 /* CharacterListApiClientTests.swift in Sources */,
 				FBED84E6254F57CB00A1BC17 /* CharacterListViewModelTests.swift in Sources */,
+				FBED84F0254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift in Sources */,
 				FBED84D3254F55D300A1BC17 /* CharacterListDataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
