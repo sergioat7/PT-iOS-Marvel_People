@@ -16,6 +16,7 @@ protocol CharacterListViewModelProtocol: class {
     func getCharacterCellViewModelsObserver() -> BehaviorSubject<[CharacterCellViewModel]>
     func getCharacterCellViewModelsObserverValue() -> [CharacterCellViewModel]
     func getCharacters()
+    func reloadData()
 }
 
 class CharacterListViewModel: BaseViewModel {
@@ -80,6 +81,12 @@ extension CharacterListViewModel: CharacterListViewModelProtocol {
     
     func getCharacters() {
         dataManager.getCharacters(search: nil)
+    }
+    
+    func reloadData() {
+        
+        dataManager.resetPage()
+        characterCellViewModelsObserver.onNext([])
     }
 }
 

@@ -34,6 +34,7 @@ class CharacterListViewController: BaseViewController {
     
     private var viewModel:CharacterListViewModelProtocol?
     private let disposeBag = DisposeBag()
+    private let refreshControl = UIRefreshControl.init(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
     
     // MARK: - View lifecycle
     
@@ -41,6 +42,7 @@ class CharacterListViewController: BaseViewController {
         super.viewDidLoad()
         
         title = "MARVEL_CHARACTERS".localized()
+        configViews()
         registerNib()
         setupBindings()
         viewModel?.viewDidLoad()
@@ -55,6 +57,12 @@ class CharacterListViewController: BaseViewController {
     // MARK: - Overrides
     
     // MARK: - Private functions
+    
+    private func configViews() {
+        
+        refreshControl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        tvCharacters.refreshControl = refreshControl
+    }
     
     private func registerNib() {
         
@@ -75,6 +83,7 @@ class CharacterListViewController: BaseViewController {
                 if indexPath.item == (characterCellViewModelsCount - 1) {
                     //TODO load more items
                 }
+                strongSelf.refreshControl.endRefreshing()
             }))
             .disposed(by: disposeBag)
         
@@ -103,6 +112,12 @@ class CharacterListViewController: BaseViewController {
                 cell.characterCellViewModel = character
             }
             .disposed(by: disposeBag)
+    }
+    
+    @objc private func reloadData() {
+        
+        viewModel?.reloadData()
+        viewModel?.getCharacters()
     }
 }
 
