@@ -11,10 +11,6 @@ import RxSwift
 import RxCocoa
 
 protocol CharacterListViewProtocol: BaseViewProtocol {
-    /**
-     * Add here your methods for communication VIEW_MODEL -> VIEW
-     */
-    
 }
 
 protocol CharacterListConfigurableViewProtocol: class {
@@ -81,7 +77,7 @@ class CharacterListViewController: BaseViewController {
                 guard let strongSelf = self else { return }
                 let characterCellViewModelsCount = strongSelf.viewModel?.getCharacterCellViewModelsObserverValue().count ?? 0
                 if indexPath.item == (characterCellViewModelsCount - 1) {
-                    //TODO load more items
+                    strongSelf.viewModel?.getCharacters()
                 }
                 strongSelf.refreshControl.endRefreshing()
             }))
@@ -134,7 +130,6 @@ class CharacterListViewController: BaseViewController {
 // MARK: - CharacterListViewProtocol
 
 extension CharacterListViewController:  CharacterListViewProtocol {
-    
 }
 
 // MARK: - CharacterListViewProtocol
