@@ -493,6 +493,8 @@
 			isa = PBXGroup;
 			children = (
 				FBED84EE254F5AB700A1BC17 /* APIClient */,
+				FBED84D2254F55D300A1BC17 /* CharacterListDataManagerTests.swift */,
+				FBED84E5254F57CB00A1BC17 /* CharacterListViewModelTests.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -501,8 +503,6 @@
 			isa = PBXGroup;
 			children = (
 				FBED84C1254F538800A1BC17 /* APIClient */,
-				FBED84D2254F55D300A1BC17 /* CharacterListDataManagerTests.swift */,
-				FBED84E5254F57CB00A1BC17 /* CharacterListViewModelTests.swift */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -510,7 +510,7 @@
 		FBED84C1254F538800A1BC17 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */,
+				FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -518,7 +518,7 @@
 		FBED84EE254F5AB700A1BC17 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				FBED84EF254F5AD000A1BC17 /* CharacterDetailApiClientTests.swift */,
+				FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
