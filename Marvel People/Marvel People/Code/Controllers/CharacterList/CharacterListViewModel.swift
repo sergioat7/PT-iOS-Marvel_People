@@ -25,7 +25,7 @@ class CharacterListViewModel: BaseViewModel {
     
     // MARK: - Public variables
     
-    weak var view:CharacterListViewProtocol?
+    weak var view: CharacterListViewProtocol?
     
     // MARK: - Private variables
     
@@ -38,7 +38,7 @@ class CharacterListViewModel: BaseViewModel {
     
     // MARK: - Initialization
     
-    init(view:CharacterListViewProtocol,
+    init(view: CharacterListViewProtocol,
          dataManager: CharacterListDataManagerProtocol) {
         self.view = view
         self.dataManager = dataManager
