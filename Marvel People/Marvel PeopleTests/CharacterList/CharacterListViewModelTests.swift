@@ -13,7 +13,7 @@ import RxCocoa
 
 class CharacterListViewModelTests: XCTestCase {
     
-    var sut: CharacterListViewModel!
+    var sut: CharacterListViewModelProtocol!
     let disposeBag = DisposeBag()
 
     override func setUpWithError() throws {

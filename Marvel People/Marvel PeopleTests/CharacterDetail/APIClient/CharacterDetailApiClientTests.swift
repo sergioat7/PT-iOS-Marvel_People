@@ -13,7 +13,7 @@ import RxCocoa
 
 class CharacterDetailApiClientTests: XCTestCase {
     
-    var sut: CharacterDetailApiClient!
+    var sut: CharacterDetailApiClientProtocol!
     let disposeBag = DisposeBag()
     
     override func setUpWithError() throws {

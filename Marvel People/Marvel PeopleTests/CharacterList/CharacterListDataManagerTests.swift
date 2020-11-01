@@ -13,7 +13,7 @@ import RxCocoa
 
 class CharacterListDataManagerTests: XCTestCase {
     
-    var sut: CharacterListDataManager!
+    var sut: CharacterListDataManagerProtocol!
     let disposeBag = DisposeBag()
 
     override func setUpWithError() throws {

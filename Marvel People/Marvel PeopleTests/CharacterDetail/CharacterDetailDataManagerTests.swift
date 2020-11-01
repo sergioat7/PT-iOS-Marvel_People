@@ -13,8 +13,8 @@ import RxCocoa
 
 class CharacterDetailDataManagerTests: XCTestCase {
     
-    var sutRight: CharacterDetailDataManager!
-    var sutWrong: CharacterDetailDataManager!
+    var sutRight: CharacterDetailDataManagerProtocol!
+    var sutWrong: CharacterDetailDataManagerProtocol!
     let disposeBag = DisposeBag()
 
     override func setUpWithError() throws {
