@@ -1,5 +1,5 @@
 //
-//  CharacterDetailApiClientTests.swift
+//  CharacterDetailDataManagerTests.swift
 //  Marvel PeopleTests
 //
 //  Created by Sergio Aragonés on 01/11/2020.
@@ -11,41 +11,45 @@ import RxSwift
 import RxCocoa
 @testable import Marvel_People
 
-class CharacterDetailApiClientTests: XCTestCase {
+class CharacterDetailDataManagerTests: XCTestCase {
     
-    var sut: CharacterDetailApiClient!
+    var sutRight: CharacterDetailDataManager!
+    var sutWrong: CharacterDetailDataManager!
     let disposeBag = DisposeBag()
-    
+
     override func setUpWithError() throws {
         
         super.setUp()
-        sut = CharacterDetailApiClient()
+        sutRight = CharacterDetailDataManager(apiClient: CharacterDetailApiClient(),
+                                              characterId: 1009610)
+        sutWrong = CharacterDetailDataManager(apiClient: CharacterDetailApiClient(),
+                                              characterId: 0)
     }
 
     override func tearDownWithError() throws {
         
-        sut = nil
+        sutRight = nil
+        sutWrong = nil
         super.tearDown()
     }
     
     func testGetCharacterRight() {
         
-        var characters: CharactersResponse?
+        var character: CharacterResponse?
         
         let promise = expectation(description: "Get successful")
-        sut.getCharacter(characterId: 1009610)
-        sut
-            .getCharactersDataObserver()
-            .subscribe(onNext: { charactersDataResponse in
+        sutRight.getCharacter()
+        sutRight
+            .getCharacterObserver()
+            .subscribe(onNext: { characterResponse in
                 
-                characters = charactersDataResponse.data.results
+                character = characterResponse
                 promise.fulfill()
             })
             .disposed(by: disposeBag)
         wait(for: [promise], timeout: 60)
         
-        XCTAssertNotNil(characters)
-        XCTAssertTrue(characters!.count == 1)
+        XCTAssertNotNil(character)
     }
     
     func testGetCharacterWrong() throws {
@@ -53,8 +57,8 @@ class CharacterDetailApiClientTests: XCTestCase {
         var error: ErrorResponse?
         
         let promise = expectation(description: "Get unsuccessful")
-        sut.getCharacter(characterId: 0)
-        sut
+        sutWrong.getCharacter()
+        sutWrong
             .getErrorObserver()
             .subscribe(onNext: { errorResponse in
                 
