@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				FB218B93254F28950084D4C9 /* APIClient */,
-				FB218B97254F28B30084D4C9 /* CharacterDetailApiClient.swift */,
+				FB218B99254F28B30084D4C9 /* CharacterDetailDataManager.swift */,
 				FB218B95254F28B30084D4C9 /* CharacterDetailRouter.swift */,
 				FB218B96254F28B30084D4C9 /* CharacterDetailViewController.swift */,
 				FB218B98254F28B30084D4C9 /* CharacterDetailViewModel.swift */,
@@ -204,7 +204,7 @@
 		FB218B93254F28950084D4C9 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				FB218B99254F28B30084D4C9 /* CharacterDetailDataManager.swift */,
+				FB218B97254F28B30084D4C9 /* CharacterDetailApiClient.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
