@@ -56,6 +56,7 @@
 		FBE66FCC254EE8D40081801A /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE66FCA254EE8D40081801A /* SFProDisplay-Bold.ttf */; };
 		FBE66FCD254EE8D40081801A /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE66FCB254EE8D40081801A /* SFProDisplay-Regular.ttf */; };
 		FBED84A2254F488A00A1BC17 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */; };
+		FBED84C3254F53CF00A1BC17 /* CharacterListApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		FBED84A1254F488A00A1BC17 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		FBED84B3254F532200A1BC17 /* CharacterListTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterListTests.xctestplan; sourceTree = "<group>"; };
 		FBED84B4254F532F00A1BC17 /* CharacterDetailTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterDetailTests.xctestplan; sourceTree = "<group>"; };
+		FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListApiClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,8 +493,17 @@
 		FBED84AD254F528600A1BC17 /* CharacterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FBED84C1254F538800A1BC17 /* APIClient */,
 			);
 			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		FBED84C1254F538800A1BC17 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				FBED84C2254F53CF00A1BC17 /* CharacterListApiClientTests.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,10 +585,12 @@
 					};
 					FB55D4F4254C1BBC00B8DF3D = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = FB55D4DE254C1BBC00B8DF3D;
 					};
 					FB55D4FF254C1BBD00B8DF3D = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = FB55D4DE254C1BBC00B8DF3D;
 					};
 				};
@@ -730,6 +743,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBED84C3254F53CF00A1BC17 /* CharacterListApiClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,6 +962,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel PeopleTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -958,6 +973,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aragones.sergio.Marvel-PeopleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marvel People.app/Marvel People";
@@ -969,6 +985,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel PeopleTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -989,6 +1006,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel PeopleUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -998,6 +1016,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aragones.sergio.Marvel-PeopleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Marvel People";
@@ -1008,6 +1027,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Marvel PeopleUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
