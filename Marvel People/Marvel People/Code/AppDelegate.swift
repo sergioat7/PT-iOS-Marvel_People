@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
-        //Load first view controller
+        CharacterListRouter().push()
         window?.makeKeyAndVisible()
         return true
     }

@@ -9,3 +9,14 @@
 // General
 
 "APP_NAME" = "Marvel People";
+
+// Character list
+
+"MARVEL_CHARACTERS" = "Marvel Characters";
+"SEARCH_CHARACTERS" = "Search characters";
+"MORE_INFO" = "More info";
+
+// Errors
+
+"ERROR_SERVER" = "There was an error on getting data. Please, try again";
+"ERROR_BUTTON_ACCEPT" = "Accept";
