@@ -110,7 +110,9 @@ class CharacterListViewController: BaseViewController {
             .getErrorObserver()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] errorResponse in
-                //TODO show error
+                
+                self?.showError(message: errorResponse.message,
+                                handler: nil)
             })
             .disposed(by: disposeBag)
         

@@ -13,3 +13,8 @@
 // Character list
 
 "MARVEL_CHARACTERS" = "Marvel Characters";
+
+// Errors
+
+"ERROR_SERVER" = "There was an error on getting data. Please, try again";
+"ERROR_BUTTON_ACCEPT" = "Accept";

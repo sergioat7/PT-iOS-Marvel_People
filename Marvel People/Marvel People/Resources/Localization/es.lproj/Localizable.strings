@@ -13,3 +13,8 @@
 // Character list
 
 "MARVEL_CHARACTERS" = "Personajes Marvel";
+
+// Errors
+
+"ERROR_SERVER" = "Hubo un error al recuperar los datos. Por favor, inténtalo otra vez";
+"ERROR_BUTTON_ACCEPT" = "Aceptar";
